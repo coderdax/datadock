@@ -17,7 +17,8 @@ app.add_middleware(
 )
 
 # SQLite DB (file will be created)
-DB_PATH = "../imported_data.db"
+import tempfile
+DB_PATH = tempfile.gettempdir() + "/imported_data.db"
 engine = create_engine(f"sqlite:///{DB_PATH}")
 
 # Your dataset configs
