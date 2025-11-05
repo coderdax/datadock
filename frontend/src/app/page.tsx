@@ -18,7 +18,7 @@ export default function Home() {
 
     const checkBackend = async () => {
       try {
-        await axios.get('http://localhost:8000/health');
+        await axios.get('/api/health');;
         setBackendStatus('ready');
       } catch {
         setBackendStatus('error');
@@ -39,9 +39,7 @@ export default function Home() {
     formData.append('file', file);
 
     try {
-      const res = await axios.post(`http://localhost:8000/validate/${dataset}`, formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      });
+      const res = await axios.post(`/api/validate/${dataset}`, formData);
       setResult(res.data);
       setShowValidation(true);
       setShowPreview(true);
@@ -61,7 +59,7 @@ export default function Home() {
   const handleSave = async () => {
     if (!result?.valid) return alert('Fix validation errors first');
     try {
-      await axios.post(`http://localhost:8000/save/${dataset}`, result.previews);
+      await axios.post(`/api/save/${dataset}`, result.previews);
       alert('Data saved to SQLite database!');
       setResult(null);
       setFile(null);
