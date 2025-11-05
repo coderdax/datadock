@@ -114,11 +114,10 @@ const handleClear = () => {
         )}
         {backendStatus === 'error' && (
           <div className="text-center p-4 bg-red-100 border border-red-300 rounded-lg mb-8">
-            Backend not running. <br/>
-            <strong>Run in Terminal:</strong><br/>
-            <code className="bg-gray-800 text-white px-2 py-1 rounded mt-2 inline-block">
-              cd backend && uvicorn main:app --reload
-            </code>
+            ❌ Backend not reachable.<br/>
+            <small className="text-gray-600">
+              (Vercel serverless API is at <code className="bg-gray-800 text-white px-1 rounded">/api</code>)
+            </small>
           </div>
         )}
 
