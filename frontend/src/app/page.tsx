@@ -244,7 +244,7 @@ const handleClear = () => {
 
               {showPreview && (
                 <div className="mt-6">
-                  {Object.entries(result.previews).map(([tableName, rows]: [string, any[]]) => (
+                   {Object.entries(result.previews as Record<string, any[]>).map(([tableName, rows]) => (
                     <div key={tableName} className="mb-12">
                       <h3 className="text-xl font-extrabold text-gray-700 mb-4 bg-blue-100 px-4 py-2 rounded-xl inline-block shadow-sm">
                         {tableName.replace('pnl_', '').toUpperCase()}
