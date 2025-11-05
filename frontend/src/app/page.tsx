@@ -18,7 +18,7 @@ export default function Home() {
 
     const checkBackend = async () => {
       try {
-        await axios.get('/api/health');;
+        await axios.get('/api/health');
         setBackendStatus('ready');
       } catch {
         setBackendStatus('error');
