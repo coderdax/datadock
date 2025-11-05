@@ -1,4 +1,7 @@
-streamlit
+fastapi
+uvicorn
 pandas
 sqlalchemy
+pydantic
 openpyxl
+python-multipart
