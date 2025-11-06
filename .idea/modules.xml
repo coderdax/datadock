@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ExcelImportApp.iml" filepath="$PROJECT_DIR$/.idea/ExcelImportApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DataDock.iml" filepath="$PROJECT_DIR$/.idea/DataDock.iml" />
     </modules>
   </component>
 </project>
